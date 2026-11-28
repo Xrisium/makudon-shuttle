@@ -18,7 +18,7 @@ Makudon 读取基线为 main / b3024d6babdbaa36c2ec375dc74189270a56386b。只读
 
 ## 品牌资源
 
-根目录新版 `makudon-shuttle-logo.svg` 已原样迁至 `assets/brand/source/makudon-shuttle-icon.svg`，全面替代旧版；独立图标、横向组合、README 浅深色版本与位置预览全部更新为新版几何及 100 × 100 画布。Fredoka Semibold 600 路径字标保持同源，字体原文件不提交、不嵌入应用。侧栏 / 主页面顶部、关于页和平台图标的使用约定见[品牌规范](../assets/brand/README.md)。[位置预览](../assets/brand/preview.png)为设计示意；应用集成和 Windows ICO 仍待产品实现。
+根目录新版 `makudon-shuttle-logo.svg` 已原样迁至 `assets/brand/source/makudon-shuttle-icon.svg`，全面替代旧版；独立图标、横向组合、README 浅深色版本与位置预览全部更新为新版几何及 100 × 100 画布。Fredoka Semibold 600 路径字标保持同源，字体原文件不提交、不嵌入应用。侧栏 / 主页面顶部、关于页的使用约定见[品牌规范](../assets/brand/README.md)。[Windows 图标资源](../assets/platform/windows/README.md)已导出 10 帧 ICO 与 12 个尺寸 PNG，保留原图几何并使用固定浅色底板；含母版、预览、生成脚本和来源哈希。[品牌位置预览](../assets/brand/preview.png)为设计示意，EXE 图标嵌入与窗口 / 任务栏集成仍待原生产品实现。
 
 ## 待讨论
 
@@ -32,6 +32,7 @@ Makudon 读取基线为 main / b3024d6babdbaa36c2ec375dc74189270a56386b。只读
 
 - 品牌 SVG 的两条原始图标路径与线宽保持一致；字标中的 Makudon 七个字形路径及字距与参考仓库完全一致。三个主资源和两个 README 派生资源的哈希通过，无文本节点、字体依赖或字体文件。
 - 品牌浅深色、独立资源和界面位置预览已渲染并目视检查；仓库 Markdown 本地链接检查通过。这不代表原生应用集成或 Windows 图标验收。
+- Windows ICO 的 10 个尺寸帧已独立解码，并与对应 PNG 逐像素核对；12 个 PNG 的宽高、RGBA 和透明度检查通过。当前 Windows 主机的 Win32 LoadImageW 已加载全部 10 个尺寸，宽高与 32bpp 正确。浅深背景下的原尺寸预览已核对；不代表 Windows 10 实际产品集成验收。
 - Markdown 本地链接、编码、空白及旧范围残留检查通过，仓库未建立 Cargo 工程或 Rust 产品文件。
 - 交互例图的 ZIP 选择、主题、工作目录、发送 / 接收演示、取消、清空记录和两种导航通过浏览器检查，无脚本运行错误。
 - 320–1024 宽度检查无横向溢出；Noto Sans SC 400 / 500 字体加载通过，例图内保留字体许可。设计用子集不作为产品字体。

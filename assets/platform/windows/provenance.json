@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-28",
+  "status": "exported and decoded; not embedded in a Windows executable yet",
+  "source": "assets/brand/source/makudon-shuttle-icon.svg",
+  "source_sha256": "a2970c992f1ecb559fa4c1d032106092ac59f17dfc4a16ccbfa3880ede00bae7",
+  "design": {
+    "viewport": [
+      0,
+      0,
+      100,
+      100
+    ],
+    "source_viewport": [
+      0,
+      0,
+      100,
+      100
+    ],
+    "source_transform": "original group translation retained; no additional transform",
+    "geometry_modifications": "none",
+    "foreground": "#272827",
+    "backplate": "#F7F7F5",
+    "outline": "#E3E4DF",
+    "backplate_rect": {
+      "x": 0.5,
+      "y": 0.5,
+      "width": 99,
+      "height": 99,
+      "rx": 21,
+      "stroke_width": 1
+    },
+    "alpha": "transparent corners; opaque light backplate"
+  },
+  "png_sizes": [
+    16,
+    20,
+    24,
+    32,
+    40,
+    48,
+    64,
+    96,
+    128,
+    256,
+    512,
+    1024
+  ],
+  "ico_sizes": [
+    16,
+    20,
+    24,
+    32,
+    40,
+    48,
+    64,
+    96,
+    128,
+    256
+  ],
+  "ico_encoding": "32-bit BGRA DIB + 1-bit AND mask below 256; RGBA PNG at 256",
+  "rasterization": "each size independently rendered from vector at 4x, Lanczos3 downsample, RGBA PNG",
+  "tool": {
+    "sharp": "0.35.5",
+    "vips": "8.18.7",
+    "rsvg": "2.63.2"
+  },
+  "generator": "scripts/generate-windows-icons.cjs",
+  "references": [
+    "https://learn.microsoft.com/en-us/windows/apps/design/iconography/app-icon-construction",
+    "https://learn.microsoft.com/en-us/windows/win32/menurc/about-icons"
+  ],
+  "outputs_sha256": {
+    "makudon-shuttle-app-icon.svg": "db6459796c93d3d424d3436a84a4e542614496e5b32f63c46ea7a85c324734e8",
+    "png/makudon-shuttle-16.png": "7797f350737cce36c92995a584b0a3ca6cf4f0bdc4d408d2c1f782c5a242e1fc",
+    "png/makudon-shuttle-20.png": "21cf6f10848ee8eed59035d4aa6527cd0421152025da6fec1f663a28d40621c6",
+    "png/makudon-shuttle-24.png": "01f8701e28d277e3cff522db1291650533b41717ff84d6700eedfc1aceb9d9d5",
+    "png/makudon-shuttle-32.png": "83d877a077fe2f4f38822c8eb4aa88c3a224724dd600892c537df3548fb5c7c6",
+    "png/makudon-shuttle-40.png": "b20f7dc83c90e9e01c4a9cbf58849bdaf0728dbc7300c9108d4534ce67ff3088",
+    "png/makudon-shuttle-48.png": "e4921089a40cbcefac3219648d2857097ae91deb2e093c5a4a5120a15871b881",
+    "png/makudon-shuttle-64.png": "4b6fd6740161cda9b28048b90a3ec624dee7cf456438a2290e871870a6a4a64a",
+    "png/makudon-shuttle-96.png": "7f7dfba36ac720bfa81cd54ad3b0c45ac84e9986ac809fb5f1d6508df36ed0d7",
+    "png/makudon-shuttle-128.png": "ee34b631432b8067405e4a2835172bb8875513eba83324865e1308c159bb71cc",
+    "png/makudon-shuttle-256.png": "5acebef6787f5962bf73fde790495947839cea07df425afd3b22564ba0029adf",
+    "png/makudon-shuttle-512.png": "537887044aff5982434f85ce612fc3557df1aa2f5be591a23a2ef41f712e168d",
+    "png/makudon-shuttle-1024.png": "8a459b80a93c1e985d3cd2c7149ccad77c8ea68a0f7b4aea1d8bb2eb97b4e26f",
+    "makudon-shuttle.ico": "0174fae9a71c429155782ee8ce02facae6a2027c7f98303f1c88d8da609acc43",
+    "preview.png": "d75e08f6f8bed9ff66e165edbfe58f68cce0f2b4f7af0b6b2d3416f6aa4c8af2"
+  }
+}
