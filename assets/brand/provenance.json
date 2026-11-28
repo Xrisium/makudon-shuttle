@@ -35,9 +35,21 @@
   },
   "icon": {
     "source": "source/makudon-shuttle-icon.svg",
-    "original_filename": "makudon-shuttle-a-refined-icon.svg",
-    "original_sha256": "1d6ccb8eabbe62b9ffc7b3ad88811f3f50bc1a22ef53a4e9f07074cd56dce182",
-    "changes": "source moved byte-for-byte; themeable derivative changes only stroke color and SVG metadata"
+    "original_filename": "makudon-shuttle-logo.svg",
+    "original_sha256": "a2970c992f1ecb559fa4c1d032106092ac59f17dfc4a16ccbfa3880ede00bae7",
+    "changes": "replacement source moved byte-for-byte; themeable derivative changes only stroke color and SVG metadata",
+    "viewBox": [
+      0.0,
+      0.0,
+      100.0,
+      100.0
+    ],
+    "painted_bounds": [
+      15.75,
+      23.86362,
+      84.25,
+      76.13635
+    ]
   },
   "lockup": {
     "icon_scale": 1,
@@ -50,10 +62,10 @@
     "uharfbuzz": "0.57.0"
   },
   "outputs_sha256": {
-    "assets/brand/makudon-shuttle-icon.svg": "3961f823b76d4adc0e67ab8884c5a7326447fcc58deb6c1b27d14ff371db7b69",
+    "assets/brand/makudon-shuttle-icon.svg": "a7d9ca533c61dabe4e2ac60b96116a6207451b7e6b012cffb3f156a979c834ea",
     "assets/brand/makudon-shuttle-wordmark.svg": "7e5e8db4374a732bc7f45480fb5687a5f8faa63d3153a6ef19b7b5960f038c4f",
-    "assets/brand/makudon-shuttle-lockup.svg": "840823501ee222e6929143d51f78cb414bbc13dbc83087486c7bcef4f78f2ffd",
-    "assets/readme/makudon-shuttle-lockup-light.svg": "bce5eb9de984f6b036cb6ddb8a2cbaa0c26791ae2741e76bea5a1d1dffdf8128",
-    "assets/readme/makudon-shuttle-lockup-dark.svg": "825a393b6aa18c7f2db7dd75267b5ec69ae64477ba12bc1a0f5df7a960f52701"
+    "assets/brand/makudon-shuttle-lockup.svg": "a7c8b31f2ffc1586f8e42acee36d4adaec7ffb4386a3a46697f7e9c8daf94db3",
+    "assets/readme/makudon-shuttle-lockup-light.svg": "ed6e6fbd23dab695a3261bf599c96f563c9d1a2aa1d97dfab2926c60b8e35b26",
+    "assets/readme/makudon-shuttle-lockup-dark.svg": "2d673fc3f8e693a1c1f75afcb4229db8d68a99fdb2ef6d2d4e4c4c9e01b37420"
   }
 }

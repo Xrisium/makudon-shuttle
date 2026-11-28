@@ -7,6 +7,7 @@ Usage: python scripts/generate-brand.py --font /path/to/Fredoka.ttf
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -16,6 +17,7 @@ from fontTools.pens.boundsPen import BoundsPen
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
+from fontTools.svgLib.path import parse_path
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +26,7 @@ REVISION = "e7db6ca603fd4862010383ff17ffd6cc4ffac1c0"
 FONT_SHA = "2ba02e68b152868aef9ba28e24b3648c7d457fe6f25c761f2c2c53fb61a73fc8"
 LICENSE_SHA = "5c9e7eee5c6b25f4b05b8d53b2e470ea4962f9ced742d044a98f7d95d1375bab"
 TEXT = "Makudon Shuttle"
+ICON_SHA = "a2970c992f1ecb559fa4c1d032106092ac59f17dfc4a16ccbfa3880ede00bae7"
 
 
 def sha(data):
@@ -84,15 +87,34 @@ def main():
     wordmark = svg(width, height, word, "Outlined Fredoka Semibold, wght 600, wdth 100; kerning and 4 font units tracking. Transparent background.")
 
     original = (BRAND / "source/makudon-shuttle-icon.svg").read_bytes()
+    if sha(original) != ICON_SHA:
+        raise ValueError("Main logo changed; review its geometry before updating the source hash")
     root = ET.fromstring(original)
     ET.register_namespace("", "http://www.w3.org/2000/svg")
     icon_group = root[0]
+    # The supplied logo uses one translated group with round-stroked paths.
+    # Derive painted bounds from those paths instead of retaining old-logo dimensions.
+    translate = re.fullmatch(r"translate\(([-\d.]+)\s+([-\d.]+)\)", icon_group.get("transform", ""))
+    if not translate:
+        raise ValueError("Expected the supplied logo's translation transform")
+    tx, ty = map(float, translate.groups())
+    icon_bounds = []
+    for path in icon_group:
+        bp = BoundsPen(None)
+        parse_path(path.get("d"), bp)
+        a, b, c, d = bp.bounds
+        radius = float(path.get("stroke-width")) / 2
+        icon_bounds.append((a - radius + tx, b - radius + ty, c + radius + tx, d + radius + ty))
     icon_group.set("stroke", "currentColor")
     icon_body = ET.tostring(icon_group, encoding="unicode")
-    icon = svg(105, 100, "  " + icon_body, "Original Shuttle icon geometry, stroke widths and round caps. Themeable; transparent background.")
-    # Exact painted bounds: the first quadratic's minimum y is 34 - 36/11.
-    icon_bounds = (14.5, 34 - 36 / 11 - 5.5, 86.54, 77.5)
-    a, b, c, d = icon_bounds
+    vx, vy, vw, vh = map(float, root.get("viewBox").split())
+    if (vx, vy) != (0, 0):
+        raise ValueError("Expected a zero-origin source viewBox")
+    icon = svg(vw, vh, "  " + icon_body, "Current Shuttle logo geometry, translation, stroke widths and round caps. Themeable; transparent background.")
+    a = min(bound[0] for bound in icon_bounds)
+    b = min(bound[1] for bound in icon_bounds)
+    c = max(bound[2] for bound in icon_bounds)
+    d = max(bound[3] for bound in icon_bounds)
     lock_height, gap = 56, 16
     offset = c - a + gap
     icon_y = lock_height / 2 - (b + d) / 2
@@ -134,9 +156,11 @@ def main():
         },
         "icon": {
             "source": "source/makudon-shuttle-icon.svg",
-            "original_filename": "makudon-shuttle-a-refined-icon.svg",
+            "original_filename": "makudon-shuttle-logo.svg",
             "original_sha256": sha(original),
-            "changes": "source moved byte-for-byte; themeable derivative changes only stroke color and SVG metadata",
+            "changes": "replacement source moved byte-for-byte; themeable derivative changes only stroke color and SVG metadata",
+            "viewBox": [vx, vy, vw, vh],
+            "painted_bounds": [a, b, c, d],
         },
         "lockup": {"icon_scale": 1, "gap": gap, "height": lock_height, "alignment": "painted bounds centered vertically"},
         "tools": {"fonttools": fontTools.__version__, "uharfbuzz": hb.__version__},

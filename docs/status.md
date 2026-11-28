@@ -18,7 +18,7 @@ Makudon 读取基线为 main / b3024d6babdbaa36c2ec375dc74189270a56386b。只读
 
 ## 品牌资源
 
-根目录主图标已原样迁至 `assets/brand/source/makudon-shuttle-icon.svg`，提供可着色的独立图标、Fredoka Semibold 600 路径字标与横向组合，以及 README 浅深色版本。品牌参数与 Makudon 保持同源，字体原文件不提交、不嵌入应用。README 已使用组合标志；侧栏 / 主页面顶部、关于页和平台图标的使用约定见[品牌规范](../assets/brand/README.md)。[位置预览](../assets/brand/preview.png)为设计示意；应用集成和 Windows ICO 仍待产品实现。
+根目录新版 `makudon-shuttle-logo.svg` 已原样迁至 `assets/brand/source/makudon-shuttle-icon.svg`，全面替代旧版；独立图标、横向组合、README 浅深色版本与位置预览全部更新为新版几何及 100 × 100 画布。Fredoka Semibold 600 路径字标保持同源，字体原文件不提交、不嵌入应用。侧栏 / 主页面顶部、关于页和平台图标的使用约定见[品牌规范](../assets/brand/README.md)。[位置预览](../assets/brand/preview.png)为设计示意；应用集成和 Windows ICO 仍待产品实现。
 
 ## 待讨论
 
