@@ -1,4 +1,9 @@
-# Makudon Shuttle
+<h1 align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/makudon-shuttle-lockup-dark.svg">
+    <img src="assets/readme/makudon-shuttle-lockup-light.svg" alt="Makudon Shuttle" width="480">
+  </picture>
+</h1>
 
 Makudon 的 PC 文稿库 ZIP 交换工具。将手机导出的备份带到电脑，或把电脑上的文稿打包后送回 Makudon，继续使用熟悉的 ZIP 导入与恢复方式。
 
@@ -23,4 +28,6 @@ Shuttle 负责文件交换；导入模式、冲突和覆盖确认由手机 Makud
 
 - [Makudon](https://github.com/Xrisium/makudon)
 - [文档索引与开发资料](docs/README.md)
+- [品牌标志与使用规范](assets/brand/README.md)
 - [MIT 许可](LICENSE)
+- [第三方素材](THIRD_PARTY_NOTICES.md)

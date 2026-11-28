@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve the bytes used by brand provenance hashes on Windows checkouts.
+*.svg text eol=lf
+assets/brand/provenance.json text eol=lf
+docs/licenses/*.txt text eol=lf

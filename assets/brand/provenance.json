@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-28",
+  "status": "outlined assets and README integrated; native app not implemented",
+  "reference": "Makudon assets/brand/README.md and provenance.json; Codex chat 讨论界面风格与美术设计",
+  "font": {
+    "name": "Fredoka",
+    "author": "The Fredoka Project Authors",
+    "homepage": "https://fonts.google.com/specimen/Fredoka",
+    "revision": "e7db6ca603fd4862010383ff17ffd6cc4ffac1c0",
+    "source": "https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/fredoka/Fredoka%5Bwdth%2Cwght%5D.ttf",
+    "source_sha256": "2ba02e68b152868aef9ba28e24b3648c7d457fe6f25c761f2c2c53fb61a73fc8",
+    "source_bytes": 159184,
+    "license": "SIL OFL 1.1",
+    "license_source": "https://raw.githubusercontent.com/google/fonts/e7db6ca603fd4862010383ff17ffd6cc4ffac1c0/ofl/fredoka/OFL.txt",
+    "license_sha256": "5c9e7eee5c6b25f4b05b8d53b2e470ea4962f9ced742d044a98f7d95d1375bab",
+    "font_file_committed": false,
+    "font_embedded_in_app": false
+  },
+  "wordmark": {
+    "text": "Makudon Shuttle",
+    "axes": {
+      "wght": 600,
+      "wdth": 100
+    },
+    "tracking_font_units": 4,
+    "em_size": 64,
+    "shaping": "HarfBuzz Latin left-to-right, kern enabled, default ligatures",
+    "glyph_modifications": "none; bounds normalization and subtle tracking only",
+    "viewBox": [
+      0,
+      0,
+      481.248,
+      47.296
+    ]
+  },
+  "icon": {
+    "source": "source/makudon-shuttle-icon.svg",
+    "original_filename": "makudon-shuttle-a-refined-icon.svg",
+    "original_sha256": "1d6ccb8eabbe62b9ffc7b3ad88811f3f50bc1a22ef53a4e9f07074cd56dce182",
+    "changes": "source moved byte-for-byte; themeable derivative changes only stroke color and SVG metadata"
+  },
+  "lockup": {
+    "icon_scale": 1,
+    "gap": 16,
+    "height": 56,
+    "alignment": "painted bounds centered vertically"
+  },
+  "tools": {
+    "fonttools": "4.67.0",
+    "uharfbuzz": "0.57.0"
+  },
+  "outputs_sha256": {
+    "assets/brand/makudon-shuttle-icon.svg": "3961f823b76d4adc0e67ab8884c5a7326447fcc58deb6c1b27d14ff371db7b69",
+    "assets/brand/makudon-shuttle-wordmark.svg": "7e5e8db4374a732bc7f45480fb5687a5f8faa63d3153a6ef19b7b5960f038c4f",
+    "assets/brand/makudon-shuttle-lockup.svg": "840823501ee222e6929143d51f78cb414bbc13dbc83087486c7bcef4f78f2ffd",
+    "assets/readme/makudon-shuttle-lockup-light.svg": "bce5eb9de984f6b036cb6ddb8a2cbaa0c26791ae2741e76bea5a1d1dffdf8128",
+    "assets/readme/makudon-shuttle-lockup-dark.svg": "825a393b6aa18c7f2db7dd75267b5ec69ae64477ba12bc1a0f5df7a960f52701"
+  }
+}
